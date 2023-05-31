@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-run-dumpsys",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows users to run dumpsys commands.",
+  "cordova": {
+    "id": "cordova-plugin-run-dumpsys",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelcr93/run-dumpsys-cordova.git"
+  },
+  "keywords": [
+    "Dumpsys",
+    "ADB",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Raphael Ranieri <raphaelcr93@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphaelcr93/run-dumpsys-cordova/issues"
+  },
+  "homepage": "https://github.com/raphaelcr93/run-dumpsys-cordova/"
+}
