@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-run-dumpsys" version="0.0.1">
+    <name>RunDumpsys</name>
+    <description>An Android Cordova plugin that allows users to run dumpsys commands.</description>
+    <license>MIT</license>
+    <keywords>cordova,android,dumpsys,adb</keywords>
+    <repo>https://github.com/raphaelcr93/run-dumpsys-cordova.git</repo>
+    <issue>https://github.com/raphaelcr93/run-dumpsys-cordova/issues</issue>
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=7.0.0"/>
+    </engines>
+    <js-module src="www/run-dumpsys.js" name="runDumpsys">
+        <clobbers target="window.plugins.runDumpsys" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RunDumpsys">
+                <param name="android-package" value="com.ranieri.cordova.plugin.RunDumpsys"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.DUMP"/>
+        </config-file>
+
+        <source-file src="src/android/RunDumpsys.java" target-dir="src/com/ranieri/cordova/plugin" />
+        <source-file src="src/android/PermissionHelper.java" target-dir="src/com/ranieri/cordova/plugin" />
+    </platform>
+</plugin>
